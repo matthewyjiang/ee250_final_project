@@ -5,6 +5,7 @@ import time
 import base64
 import json
 import threading
+import datetime
 
 from flask import Flask, render_template, jsonify
 
@@ -134,7 +135,9 @@ if __name__ == '__main__':
         if person:
             person_detected = True
             image_to_send_to_web = img
-            web_posts_queue.append({'timestamp': time.time(), 'image': base64.b64encode(cv.imencode('.jpg', img)[1]).decode("utf-8")})
+            ts = time.time()
+            web_posts_queue.append({'timestamp': datetime.datetime.fromtimestamp(int(ts))
+      .strftime('%Y-%m-%d %H:%M:%S'), 'image': base64.b64encode(cv.imencode('.jpg', img)[1]).decode("utf-8")})
             print ("Person detected")
         else:
             person_detected = False
