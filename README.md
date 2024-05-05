@@ -9,3 +9,4 @@
 - [yolov3 trained weights and configuration file](https://pjreddie.com/darknet/yolo/)
 - flask
 - mosquitto mqtt
+- coco names and labels
