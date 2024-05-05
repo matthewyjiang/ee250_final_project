@@ -13,7 +13,7 @@ On the raspberry pi:
 
 To see visualization, go to 127.0.0.1:5000 in your browser.
 
-If there is a permission error go to your browser settings [(Chrome Settings)](chrome://settings/) and clear cookies. (this fixes it and I don't know why)
+If there is a permission error go to your browser settings and clear cookies. (this fixes it and I don't know why)
 
 ## Dependencies
 - [opencv](https://opencv.org/)
